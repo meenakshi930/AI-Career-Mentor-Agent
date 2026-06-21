@@ -23,14 +23,16 @@ def get_ai_advice(role, missing_skills, hours, year):
     A {year} student wants to become a {role}.
     They are missing these skills: {missing_skills}
     They can study {hours} hours per day.
+    
     Give them:
     1. Short encouraging advice (2-3 lines)
     2. Which skill to learn FIRST and why
     3. One free resource to start with
+    4. ONE beginner project they can build to practice
+    5. ONE free certification recommendation for this role
+    
     Keep it short, friendly and actionable.
     """
-    response = model.generate_content(prompt)
-    return response.text
 
 
 st.title("🚀 AI Career Mentor Agent")
